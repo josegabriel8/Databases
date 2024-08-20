@@ -1,0 +1,29 @@
+< shop-kids> 
+   <brands>
+     <name> Kenzo Kids </name>
+     <cloths>
+      <item>
+        <type> Sweatshirts </type>
+        <price currency = "£"> 153.00 </price>
+        <save unit = "%"> 48 </save>
+        <sizes>
+          <s1> 3 </s1>
+          <s2> 4 </s2>
+          <s3> 5 </s3>
+          <s4> 6 </s4>
+        </sizes>
+      </item>
+      <item>
+        <type> T-shirts </type>
+        <price currency = "£"> 153.00 </price>
+        <save unit = "%"> 45 </save>
+        <sizes>
+          <s1> 3 </s1>
+          <s2> 4 </s2>
+          <s3> 5 </s3>
+          <s4> 6 </s4>
+        </sizes>
+      </item>  
+     </cloths>
+   </brands>
+</shop-kids> 

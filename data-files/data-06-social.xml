@@ -1,0 +1,20 @@
+<social_users>
+   <user>
+      <name>Galileo Galilei</name>
+      <email>ggalileo@gmail.com</email>
+      <password>glGL!1564</password>
+      <birthday>15-02-1564</birthday>
+      <live>Pisa</live>        
+   </user>
+ <user>
+      <name>Leonardo da Vinci</name>
+      <email>leovinci@gmail.com</email>
+      <password>LDV*1452</password>
+      <birthday>15-4-1452</birthday>      
+   </user>
+   <user>
+      <name>Michelangelo Merisi</name>
+      <email>mmerisi@gmail.com</email>
+      <password>caravaggio1571</password>     
+   </user>
+</social_users>

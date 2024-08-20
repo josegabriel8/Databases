@@ -1,0 +1,231 @@
+CREATE DATABASE recipe;
+USE recipe;
+
+CREATE TABLE Course(
+	name VARCHAR(100) PRIMARY KEY,
+    courseType VARCHAR(100),
+    difficulty VARCHAR(10),
+    preparationTime NUMERIC(4)
+);
+
+CREATE TABLE Ingredient(
+	name VARCHAR(100) PRIMARY KEY,
+    description VARCHAR(50),
+    category VARCHAR(20)
+);
+
+CREATE TABLE Recipe(
+	courseName VARCHAR(100),  
+    ingredientName VARCHAR(100), 
+    quantity NUMERIC(5,2), 
+    FOREIGN KEY (courseName) REFERENCES course(name),
+    FOREIGN KEY (ingredientName) REFERENCES Ingredient(name)
+);
+
+INSERT INTO Course VALUES('Caesar Salad', 'Salad', 'Easy', 20);
+INSERT INTO Course VALUES('Lasagne', 'Pasta', 'Medium', 90);
+INSERT INTO Course VALUES('Tiramisù', 'Dessert', 'High', 110);
+INSERT INTO Course VALUES('Cotoletta alla Milanese', 'Meat', 'Medium', 45);
+INSERT INTO Course VALUES('Apple Cake', 'Dessert', 'Easy', 30);
+INSERT INTO Course VALUES('Pumpkin Gnocchi', 'Pasta', 'Easy', 40);
+INSERT INTO Course VALUES('Mushroom Risotto', 'Pasta', 'Easy', 35);
+INSERT INTO Course VALUES('Lentil Soup', NULL, 'Easy', 15);
+INSERT INTO Course VALUES('Caprese Salad', 'Starter', 'Very Easy', 10);
+INSERT INTO Course VALUES('Penne all''arrabbiata', 'Pasta', 'Very Easy', 20);
+INSERT INTO Course VALUES('Focaccia Bread', 'Bread', 'Easy', 50);
+INSERT INTO Course VALUES('Apple Crumble', 'Dessert', 'Easy', 55);
+INSERT INTO Course VALUES('Risotto 4 cheeses', 'N/A', NULL, NULL);
+INSERT INTO Course VALUES('Pumpkin chips with rosemary', 'appetizers', 'Easy', 15);
+INSERT INTO Course VALUES('Olive all’ascolana', 'appetizers', 'Medium', 20);
+
+
+
+INSERT INTO Ingredient VALUES('Lettuce', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Bread', 'brown bread', 'bread');
+INSERT INTO Ingredient VALUES('Olive oil', 'mediterranean oil', 'oil');
+INSERT INTO Ingredient VALUES('Egg','chicken egg', 'egg');
+INSERT INTO Ingredient VALUES('Mayonnaiese', 'creamy dressing often used as a condiment', 'souce');
+INSERT INTO Ingredient VALUES('Parmesan', 'hard, granular cheese', 'cheese');
+INSERT INTO Ingredient VALUES('Carrot', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Onion', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Leek', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Parsley', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Basil', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Garlic', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Celery', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Tomato', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Bacon', '', 'meat');
+INSERT INTO Ingredient VALUES('Bovine meat', '', 'meat');
+INSERT INTO Ingredient VALUES('Tomato puree', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Milk', '', 'milk products');
+INSERT INTO Ingredient VALUES('Salt', '', 'spice');
+INSERT INTO Ingredient VALUES('Pepper', '', 'spice');
+INSERT INTO Ingredient VALUES('Butter', '', 'milk products');
+INSERT INTO Ingredient VALUES('Wheat', '', 'flour');
+INSERT INTO Ingredient VALUES('Nutmeg', '', 'spice');
+INSERT INTO Ingredient VALUES('Puff pastry', '', 'pasta');
+INSERT INTO Ingredient VALUES('White sugar', NULL, 'sugar');
+INSERT INTO Ingredient VALUES('Brown sugar', NULL, 'sugar');
+INSERT INTO Ingredient VALUES('Mascarpone', '', 'milk products');
+INSERT INTO Ingredient VALUES('Mozzarella - Bufala', '', 'milk products');
+INSERT INTO Ingredient VALUES('Sponge finger', '', 'cakes');
+INSERT INTO Ingredient VALUES('Coffee', 'black coffee', 'coffee');
+INSERT INTO Ingredient VALUES('Beef', NULL, 'meat');
+INSERT INTO Ingredient VALUES('White bread', NULL, 'bread');
+INSERT INTO Ingredient VALUES('Apple', 'golden', 'fruit');
+INSERT INTO Ingredient VALUES('Bramley apple', NULL, 'fruit');
+INSERT INTO Ingredient VALUES('Powder', '', 'baking powder');
+INSERT INTO Ingredient VALUES('Pumpkin', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Sage', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Pecorino', '', 'cheese');
+INSERT INTO Ingredient VALUES('Artichoke', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Marsala', '', 'wine');
+INSERT INTO Ingredient VALUES('White wine', '', 'wine');
+INSERT INTO Ingredient VALUES('Vegetable stock cube', 'cube', 'vegetable');
+INSERT INTO Ingredient VALUES('Vegetable stock', 'stock', 'vegetable');
+INSERT INTO Ingredient VALUES('Mushrooms', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Rice', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Red lentil', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Dried Chilli flakes', '', 'vegetable');
+INSERT INTO Ingredient VALUES('Penne Pasta', '', 'pasta');
+INSERT INTO Ingredient VALUES('Dried Yeast', '', 'yeast');
+INSERT INTO Ingredient VALUES('Warm Water', '', 'N/A');
+INSERT INTO Ingredient VALUES('Rosemary', '', 'aromatic');
+INSERT INTO Ingredient VALUES('Flaky Sea Salt', '', 'N/A');
+INSERT INTO Ingredient VALUES('Rolled oats', '', 'N/A');
+INSERT INTO Ingredient VALUES('vegetable soup', '', 'N/A');
+INSERT INTO Ingredient VALUES('Provolone', NULL, 'cheese');
+INSERT INTO Ingredient VALUES('Gorgonzola', NULL, 'cheese');
+INSERT INTO Ingredient VALUES('Brie', NULL, 'cheese');
+INSERT INTO Ingredient VALUES('Olive', NULL, 'N/A');
+
+# Risotto 4 cheeses
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'vegetable soup', 50);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Rice', 350);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Mascarpone', 50);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Provolone', 100);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Gorgonzola', 100);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Brie', 100);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Onion', 10);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'White wine', 10);
+INSERT INTO Recipe VALUES('Risotto 4 cheeses', 'Olive oil', NULL);
+
+# Apple Crumble
+INSERT INTO Recipe VALUES('Apple Crumble', 'Bramley apple', 575);
+INSERT INTO Recipe VALUES('Apple Crumble', 'Brown sugar', 100);
+INSERT INTO Recipe VALUES('Apple Crumble', 'Wheat', 275);
+INSERT INTO Recipe VALUES('Apple Crumble', 'Butter', 110);
+INSERT INTO Recipe VALUES('Apple Crumble', 'Rolled oats', NULL);
+
+# Focaccia Bread
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Dried Yeast', 10);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Wheat', 465);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Salt', 12.5);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Warm Water', 318);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Olive oil', 3);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Rosemary', 4);
+INSERT INTO Recipe VALUES('Focaccia Bread', 'Flaky Sea Salt', NULL);
+
+# Penne all'arrabbiata
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Garlic', 2);
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Olive oil', 3);
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Dried Chilli flakes', 3);
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Tomato', 400);
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Penne Pasta', 400);
+INSERT INTO Recipe VALUES('Penne all''arrabbiata', 'Basil', 10);
+
+# Caesar Salad 
+INSERT INTO Recipe VALUES('Caesar Salad', 'Lettuce', 4);
+INSERT INTO Recipe VALUES('Caesar Salad', 'Bread', 2);
+INSERT INTO Recipe VALUES('Caesar Salad', 'Olive oil', 150);
+INSERT INTO Recipe VALUES('Caesar Salad', 'Egg', 1);
+INSERT INTO Recipe VALUES('Caesar Salad', 'Mayonnaiese', 1);
+INSERT INTO Recipe VALUES('Caesar Salad', 'Parmesan', 100);
+
+# Lasagne 
+INSERT INTO Recipe VALUES('Lasagne', 'Carrot', 50);
+INSERT INTO Recipe VALUES('Lasagne', 'Onion', 60);
+INSERT INTO Recipe VALUES('Lasagne', 'Celery', 50);
+INSERT INTO Recipe VALUES('Lasagne', 'Bacon', 500);
+INSERT INTO Recipe VALUES('Lasagne', 'Bovine meat', 500);
+INSERT INTO Recipe VALUES('Lasagne', 'Tomato puree', 250);
+INSERT INTO Recipe VALUES('Lasagne', 'Milk', 100);
+INSERT INTO Recipe VALUES('Lasagne', 'Olive oil', 20);
+INSERT INTO Recipe VALUES('Lasagne', 'Salt', 2);
+INSERT INTO Recipe VALUES('Lasagne', 'Pepper', 2);
+INSERT INTO Recipe VALUES('Lasagne', 'Butter', 100);
+INSERT INTO Recipe VALUES('Lasagne', 'Wheat', 80);
+INSERT INTO Recipe VALUES('Lasagne', 'Nutmeg', 2);
+INSERT INTO Recipe VALUES('Lasagne', 'Puff pastry', 500);
+
+# Tiramisù
+INSERT INTO Recipe VALUES('Tiramisù', 'Egg', 6);
+INSERT INTO Recipe VALUES('Tiramisù', 'White sugar', 120);
+INSERT INTO Recipe VALUES('Tiramisù', 'Mascarpone', 500);
+INSERT INTO Recipe VALUES('Tiramisù', 'Sponge finger', 400);
+INSERT INTO Recipe VALUES('Tiramisù', 'Coffee', 50);
+
+# Cotoletta alla Milanese
+INSERT INTO Recipe VALUES('Cotoletta alla Milanese', 'Egg', 1);
+INSERT INTO Recipe VALUES('Cotoletta alla Milanese', 'Beef', 1);
+INSERT INTO Recipe VALUES('Cotoletta alla Milanese', 'White bread', 5);
+INSERT INTO Recipe VALUES('Cotoletta alla Milanese', 'Olive oil', 2);
+
+# Apple Cake
+INSERT INTO Recipe VALUES('Apple Cake', 'Apple', 4);
+INSERT INTO Recipe VALUES('Apple Cake', 'Egg', 3);
+INSERT INTO Recipe VALUES('Apple Cake', 'Butter', 50);
+INSERT INTO Recipe VALUES('Apple Cake', 'Wheat', 300);
+INSERT INTO Recipe VALUES('Apple Cake', 'White sugar', 200);
+INSERT INTO Recipe VALUES('Apple Cake', 'Powder', 1);
+INSERT INTO Recipe VALUES('Apple Cake', 'Milk', 20);
+
+# Pumpkin Gnocchi
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Pumpkin', 600);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Wheat', 300);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Egg', 1);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Salt', NULL);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'White sugar', NULL);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Sage', NULL);
+INSERT INTO Recipe VALUES('Pumpkin Gnocchi', 'Pecorino', 30);
+
+# Mushroom Risotto
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Vegetable stock cube', 1);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Olive oil', 2);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Onion', 1);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'garlic', 2);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Mushrooms', 250);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Rice', 300);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Butter', 25);
+INSERT INTO Recipe VALUES('Mushroom Risotto', 'Parmesan', 50);
+
+# Lentil Soup
+INSERT INTO Recipe VALUES('Lentil Soup', 'Vegetable stock', 2);
+INSERT INTO Recipe VALUES('Lentil Soup', 'Red lentil', 150);
+INSERT INTO Recipe VALUES('Lentil Soup', 'Carrot', 6);
+INSERT INTO Recipe VALUES('Lentil Soup', 'Leek', 2);
+INSERT INTO Recipe VALUES('Lentil Soup', 'Parsley', NULL);
+
+# Caprese Salad
+INSERT INTO Recipe VALUES('Caprese Salad', 'Mozzarella - Bufala', 500);
+INSERT INTO Recipe VALUES('Caprese Salad', 'Tomato', 4);
+INSERT INTO Recipe VALUES('Caprese Salad', 'Olive oil', 4);
+INSERT INTO Recipe VALUES('Caprese Salad', 'Basil', NULL);
+INSERT INTO Recipe VALUES('Caprese Salad', 'Salt', NULL);
+
+# Pumpkin chips with rosemary
+INSERT INTO Recipe VALUES('Pumpkin chips with rosemary','Pumpkin',600);
+INSERT INTO Recipe VALUES('Pumpkin chips with rosemary','Rosemary',3);
+INSERT INTO Recipe VALUES('Pumpkin chips with rosemary','Olive oil', NULL);
+
+# Olive all’ascolana
+INSERT INTO Recipe VALUES('Olive all’ascolana','Olive',NULL);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Bovine meat',50);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Bread',NULL);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Onion',0.5);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Nutmeg',NULL);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Parmesan',NULL);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Salt',NULL);
+INSERT INTO Recipe VALUES('Olive all’ascolana','Egg',NULL);
+
+###########

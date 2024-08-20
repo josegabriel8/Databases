@@ -1,0 +1,15 @@
+<menu_web>
+   <title type = "restaruant"> RISTORANTE BOLOGNA </title>
+   <doucment> menu </document>
+   <item>
+      <category> 
+       <ita> PRIMI PIATTI </ita>
+       <eng> FIRST COURSE </eng>
+      </category>
+      <course>
+         <ita> Agnolotti burro e salvia </ita>
+         <eng> Agnolotti with butter and sage </eng>
+         <price currency = "£"> 20.00 </price>
+      </course>
+   </item>
+</menu_web>

@@ -1,0 +1,255 @@
+<homicide victims>
+    <year> 2018 </year>
+    <Country>
+       <name> Germany </name>
+       <numbers>
+         <Total Unit = "number"> 788 </Total Unit = "number">
+         <Male Unit = "%"> 53.4 </Male Unit = "%">
+         <Female Unit = "%"> 46.6 </Female Unit = "%">
+       </numbers>
+    </Country>
+</Homicide victims>
+
+##########aqui year iba dentro de country 
+
+not neccesary, is easly computed 
+
+
+
+<museum counting>
+    <Year> 2017 </Year>
+    <nation>
+      <Name> France </name>
+      <Population unit= "number"> 64694487 </Population unit= "number">
+      <Museum numbers>
+        <Art unit= "number"> 805 </Art unit= "number">
+        <Science unit= "number"> 341 </Science unit= "number">
+        <others unit= "number"> 78 </others unit= "number">
+      </Museum numbers>
+      <Visitors unit= "number"> 63199181 </Visitors unit= "number">
+    </nation>
+   
+####aqui year iba en el primer tang asi <statistics year="2017">
+
+
+
+
+
+
+<Message>
+  <Sections>
+    <Date-time>
+        <date format="yyyy-mm-dd"> 2019-12-20 </date format="yyyy-mm-dd">
+        <time format="hh:mm"> 18:40 </time format="hh:mm">
+    <Date-time>
+    <From:> 
+        <email>elisabeth.collins@abc.com </email>
+    </from:>
+    <To:>
+        <email1> alice.may@abc.com </email1>
+        <email2> peter@qsy </email2>
+    </To:>
+    <Cc:>
+        <email1> afacility@abc.com </email1>
+        <email2> administration@qsy </email2>
+    </Cc:>
+    <Object> 
+        <description> meeting january,6 2020 </description>
+    </object>
+    <Text:> Dears, we inform you that t.... </Text>
+  </SEctions>
+</Message>
+
+# Sections no iba (aunque no creo que te mal),
+###donde nama hya una informacion no tinenes que hacer un child tag
+
+
+
+
+
+
+<climate change survey>
+    <question> Do you think world’s climate is changing </question>
+    <Information> 
+       <Type=> discrete </type=>
+       <format=> numeric </format=>
+       <Range=> 1-4 </range=>
+       <missing=> */7/8/9 </missing=>
+    </information>
+    <Answers1>  
+       <value> 1 </value>
+       <Label> definitely changing </label> 
+    </answer1>
+    <Answers2>  
+       <value> 2 </value>
+       <Label> probably changing </label> 
+    </answer2>
+    <Answers3>  
+       <value> 3 </value>
+       <Label> probably not changing </label> 
+    </answer4>
+
+#mal,en la tabla se ve que la pregunta, information y value-label son 3 segmentos separados
+#si pones aswer1 and answer 2 al mimso nivel de esos secmetos esta mal
+#las answers 1 2 etc deberian ser un child thel segmento answers
+   
+
+
+
+<Compare prices>
+   <title> Prices shwon in EUR for 1-night stay </title>
+   <year> 2022 </year>
+   <Month> 
+         <name>July <name>
+         <week days> 
+             <Monday>
+                <4th>
+                   <Price currency= "EURO"> 320 </Price currency= "EURO"> 
+                </4th>
+                <11th>
+                   <Price currency= "EURO"> 320 </Price currency= "EURO"> 
+                </11th>
+                <18th>
+                   <Price currency= "EURO"> 320 </Price currency= "EURO"> 
+                </18th>
+                <25th>
+                   <Price currency= "EURO"> 320 </Price currency= "EURO"> 
+                </25th>
+             </monday>
+        </week day>
+   </month>
+<compare prices>
+
+#Mal, 4th and 11th etc are values of a case/cell, not the name of the cell,
+#if i use it like this i lost the information of 4th etc.
+#tienes que pensar en la estructura, si describes la columna, la columna esta compuesta de cells,
+# todo lo que esta dentro del el cel is new information
+ 
+
+
+<Ristaurante bologna>
+   <menu>
+     <courses>
+          <a>
+             <italian> Primi piatti </italian>
+             <english> First course </english>
+             <dishes>
+                 <first option>
+                      <italian> agnollotti burro e salvia </italian>
+                      <english> agnolloti with butter and sage </english>
+                      <price currency="euro"> 20 <price currency="euro">
+                 </first option>
+                 <second option>
+                      <italian> tagliolitti al ragu </italian>
+                      <english> tagliolini with meat and sage </english>
+                      <price currency="euro"> 16 <price currency="euro">
+                 </second option>
+             </dishes>
+          </a>
+          <b>
+             <italian> dolce </italian>
+             <english> dessert </english>
+             <dishes>
+                 <first option>
+                      <italian> sformato di cioccolato</italian>
+                      <english> hot chocolete flan </english>
+                      <price currency="euro"> 10 <price currency="euro">
+                 </first option>
+                 <second option>
+                      <italian> creme brule </italian>
+                
+                      <price currency="euro"> 10 <price currency="euro">
+                 </second option>
+             </dishes>
+          </a>
+     </courses>
+  </menu>
+</ristaurante>
+
+
+#super diferente           
+#1- "reusaturante bologna" y "menu" son informaciones parte del documento,
+#hay que ponerlo explicito
+#2- yo ni se que poner
+
+
+
+
+<web>
+  <title> 2022 worldwide box office </title>
+  <year> 2022 </year>
+  <Table>
+     <item>
+        <rank> 1 </rank>
+        <release group> top gun: maverick </release group>
+        <numbers>
+             <worldwide currency="usd"> 1453450 </worldwide currency="usd">
+             <domestic currency="usd"> 702718222 </domestic currency="usd">
+             <proportion domestic unit="%"> 48.6 </proportion domestic unit="%">
+             <foreign currency="usd"> 1453450 </foreign currency="usd">
+             <proportion domestic unit="%"> 48.6 </proportion domestic unit="%">
+        </numbers>
+    </item>
+
+#se pudiera omitir worldwide y proportion porque eso se puede sacar en base a foreign y domestic
+
+      
+
+
+
+<web Bologna Welcome>
+  <title>  the experience of bologna </title>
+  <Card>
+        <type> activity </type>
+        <event> bologna welcome card </event>
+        <price currency="euro"> 10 </price currency="euro">
+        <name> visit museum </name>
+        <city> bologna </city>
+  </card>
+  <card> 
+        <type> activity </type>
+        <price currency="euro"> 170 </price currency="euro">
+        <name> emilias food farm </name>
+        <city> bologna </city>
+   </card>
+</web bologna welcome>
+
+
+------------------------
+
+<web flight offer>
+  <flights>
+     <departure> 
+          <airport> lin </airport>
+          <time format="00:00"> 08:50 </time format="00:00">
+     </departure>
+     <arrival>
+           <airport> cdg </airport>
+           <time format="00:00"> 10:20 </time format="00:00">
+     </arrival>
+     <note> direct... </note>
+     <offers> 
+            <type> economy </type>
+            <badge>
+                        <name> economy light </name>
+                        <price currency="euro"> 39.6 </price currency="euro">
+            </badge>
+            <badge>
+                        <name> economy classic </name>
+                        <price currency="euro"> 64.8 </price currency="euro">
+            </badge>
+            <badge>
+                        <name> economy flex</name>
+                        <price currency="euro"> 105.8 </price currency="euro">
+            </badge>
+
+     </offers>
+  </flights>
+</web>
+
+
+   
+#economy al principio iba dentro de <type> 
+                  
+          
+ 

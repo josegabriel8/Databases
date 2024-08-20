@@ -1,0 +1,7 @@
+klk
+
+para conectar workbench solamente tienes que buscar "servicios" en windows
+y luego activar mysql80
+
+despues entras y haces la conecion default sin cambiarle nada
+la contrase;a es la misma que usas para UNIBO

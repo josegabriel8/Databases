@@ -1,0 +1,35 @@
+{
+   "list_products" : 
+   {
+      "food" : 
+         {
+          "name" : "Fresh Chopped Tomatoes", 
+          "weight" : {"value": 340, "unit": "g"},
+          "price" : {"value": 2.4, "currency": "euro"}
+         },
+      "food" : 
+         {
+          "name" : "Black Olive Paste", 
+          "weight" : {"value": 90, "unit": "g"},
+          "price" : {"value": 2.7, "currency": "euro"}
+         },
+      "food" : 
+         {
+          "name" : "Organic Extra Virgin Olive Oil", 
+          "weight" : {"value": 0.51, "unit": "l"},
+          "price" : {"value": 8.9, "currency": "euro"}
+         },
+      "food" : 
+         {
+          "name" : "Pistachio Pesto", 
+          "weight" : {"value": 180, "unit": "g"},
+          "price" : {"value": 8.9, "currency": "euro"}
+         },
+      "food" : 
+         {
+          "name" : "Artichokes in Oil", 
+          "weight" : {"value": 180, "unit": "g"},
+          "price" : {"value": 6.98, "currency": "euro"}
+         }
+   }
+}

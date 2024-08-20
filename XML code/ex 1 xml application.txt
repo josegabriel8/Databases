@@ -1,0 +1,6 @@
+<homicide year = "2018"> # start tag
+   <country> # open children
+
+   </country> # close
+
+</homicide> # end tag
